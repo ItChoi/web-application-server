@@ -35,7 +35,8 @@ public class HttpRequestUtils {
         return Arrays.stream(tokens).map(t -> getKeyValue(t, "=")).filter(p -> p != null)
                 .collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
     }
-
+    
+    
     static Pair getKeyValue(String keyValue, String regex) {
         if (Strings.isNullOrEmpty(keyValue)) {
             return null;
